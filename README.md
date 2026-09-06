@@ -19,7 +19,10 @@ server, no build tools, and no internet connection required to play.
 
 ## Play
 
-Just open **`cube.html`** in your browser. That's it — everything is inlined.
+**Play online:** https://ncheaz.github.io/rubiks-cube-sim/
+
+Or play offline — just open **`cube.html`** in your browser. That's it —
+everything is inlined.
 
 ## Development
 
@@ -31,7 +34,8 @@ src/
   template.html  page skeleton with {{CSS}}/{{SOLVER}}/{{GAME}} slots
 ```
 
-Rebuild the self-contained `cube.html` after editing sources:
+Rebuild the self-contained `cube.html` (and `index.html` for GitHub Pages)
+after editing sources:
 
 ```sh
 node build.js

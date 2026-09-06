@@ -20,4 +20,6 @@ for (const [name, src] of [['solver', solver], ['game', game]]) {
 const out = tpl.replace('{{CSS}}', () => css).replace('{{SOLVER}}', () => solver).replace('{{GAME}}', () => game);
 const dest = path.join(root, 'cube.html');
 fs.writeFileSync(dest, out);
-console.log(`cube.html: ${(fs.statSync(dest).size / 1024).toFixed(1)} KB`);
+// index.html = same build, so GitHub Pages serves the game at the site root.
+fs.writeFileSync(path.join(root, 'index.html'), out);
+console.log(`cube.html: ${(fs.statSync(dest).size / 1024).toFixed(1)} KB (also written as index.html)`);
