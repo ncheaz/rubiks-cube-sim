@@ -26,6 +26,13 @@ everything is inlined.
 
 ## Development
 
+Curious how this was built? See [DEVELOPMENT.md](DEVELOPMENT.md) — the game
+was developed with an agent-driven **gauntlet loop**: a quality bar (Google's
+archived Cube Lab) was captured, then a builder/critic loop in GitHub Copilot
+Chat, powered by **GLM-5.3-Flash** (also used for vision checks of rendered
+screenshots), iterated until our cube won blind A/B comparisons against the
+bar. The full round-by-round log lives in `progress.html`.
+
 ```
 src/
   game.js        3D rendering, input handling, game state
