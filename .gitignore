@@ -1,0 +1,10 @@
+# Local workflow / evaluation artifacts
+hidden/
+blind/
+reference/
+rounds/
+.agents/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

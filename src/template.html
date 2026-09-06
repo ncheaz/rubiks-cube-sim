@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#cdc7b9">
+<title>Cube — a 3D Rubik's game</title>
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c"></canvas>
+
+  <header id="hud-top">
+    <div id="brand">
+      <div id="wordmark">CUBE</div>
+      <div id="ready"><span class="dot"></span>offline · single file · v1.5</div>
+    </div>
+    <div id="stats">
+      <div id="stat-mid">
+        <div id="mode" title="toggle: T">FREE</div>
+        <div id="timer">0:00.00</div>
+        <div id="bestline">BEST <span id="best">—</span></div>
+      </div>
+      <div id="stat-right">
+        <div class="lbl">MOVES</div>
+        <div id="moves">0</div>
+      </div>
+    </div>
+  </header>
+
+  <div id="toast" role="status"></div>
+
+  <nav id="hud-bottom">
+    <button id="btnScramble" class="btn primary">Scramble</button>
+    <button id="btnSolve" class="btn">Solve</button>
+    <button id="btnHint" class="btn">Hint</button>
+    <button id="btnUndo" class="btn">Undo</button>
+    <button id="btnMode" class="btn ghost" title="Free / Speed (T)">Mode</button>
+    <button id="btnMute" class="btn ghost icon" title="Sound">🔊</button>
+  </nav>
+
+  <div id="help">drag a face to turn · drag background to orbit · scroll / pinch to zoom<br>
+    keys <b>U D L R F B</b> (+<b>shift</b> = reverse) · <b>space</b> scramble · <b>H</b> hint · <b>⏎</b> solve · <b>Z</b> undo · <b>T</b> mode</div>
+
+  <div id="nogl">This game needs WebGL.</div>
+</div>
+<script>
+{{SOLVER}}
+</script>
+<script>
+{{GAME}}
+</script>
+</body>
+</html>
